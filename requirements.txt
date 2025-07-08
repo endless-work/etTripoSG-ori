@@ -14,6 +14,6 @@ jaxtyping
 typeguard
 pymeshlab
 einops
-numpy==1.26.4
+numpy>=1.24
 huggingface_hub
 git+https://github.com/SarahWeiii/diso.git
