@@ -12,8 +12,10 @@ python-multipart
 peft
 jaxtyping
 typeguard
-pymeshlab
 einops
 numpy>=1.24
 huggingface_hub
+fastapi
+uvicorn[standard]
 git+https://github.com/SarahWeiii/diso.git
+pymeshlab @ git+https://github.com/cnr-isti-vclab/PyMeshLab.git

@@ -36,7 +36,6 @@ COPY . .
 
 # -- Upgrade pip & install torch before diso --
 RUN pip3 install --upgrade pip
-RUN pip3 install ninja
 RUN pip3 install torch==2.0.1 torchvision==0.15.2 --index-url https://download.pytorch.org/whl/cu118
 
 # -- diso needs torch during build --
@@ -44,6 +43,8 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 # -- Port for FastAPI --
 EXPOSE 7860
+
+RUN pip3 install uvicorn[standard]
 
 # -- Start FastAPI --
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
