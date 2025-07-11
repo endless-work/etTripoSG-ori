@@ -1,5 +1,21 @@
+# TripoSG 3D Generation Model Deployment Guide for DockerHub
 
-# TripoSG 3D Generation Model Deployment Guide
+0. Login docker hub
+
+  docker login
+
+1. Build local docker image 
+
+  docker build --platform=linux/amd64 -t etstas/etapp-tripo:latest .
+
+2. Push on docker hub repo
+
+  docker push etstas/etapp-tripo:latest
+
+
+
+
+# TripoSG 3D Generation Model Deployment Guide for GITHUB
 
 This guide walks you through deploying your TripoSG-based 3D generation model using Docker and hosting it on a virtual machine (e.g. Ori or other cloud provider) with GPU support.
 
